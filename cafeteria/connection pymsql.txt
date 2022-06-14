@@ -1,0 +1,33 @@
+from functools import wraps
+
+from flask import Flask, render_template, request, session, flash, url_for,redirect
+import pymysql
+
+__cnx = None
+app = Flask(__name__)
+
+app.secret_key = 'many random bytes'
+def get_sql_connection():
+    print("Opening mysql connection")
+    global __cnx
+
+    if __cnx is None:
+        __cnx = pymysql.connect(host='localhost', database='cafeteria2', user='root', passwd='Sanju@123')
+
+    return __cnxfrom functools import wraps
+
+from flask import Flask, render_template, request, session, flash, url_for,redirect
+import pymysql
+
+__cnx = None
+app = Flask(__name__)
+
+app.secret_key = 'many random bytes'
+def get_sql_connection():
+    print("Opening mysql connection")
+    global __cnx
+
+    if __cnx is None:
+        __cnx = pymysql.connect(host='localhost', database='cafeteria2', user='root', passwd='Sanju@123')
+
+    return __cnx
