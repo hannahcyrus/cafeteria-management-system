@@ -1,0 +1,79 @@
+<html>
+<head>
+
+<style>
+
+tr:nth-child(even) {background-color: #f2f2f1;}
+a{
+color:white;
+background-color:#FF3399;
+padding:5px 15px 5px 15px;
+text-decoration:none;
+border-radius:20px;
+text-align:center;
+display: block;
+width: 120px;
+}
+.login-dark
+{
+background-color:rgb(30,40,51);
+text-align:center;
+padding:20px;
+width:350px;
+height:450px;
+border-radius:5px;
+}
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+</style>
+</head>
+<form action="{{url_for('menuu')}}" method='post'>
+<body style="background-image:url('static/img/menu1.jpg')">
+<!--<table border="0" width="100%" height="10%" bgcolor="#000000" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;border-bottom:1px dotted white;">
+<tr style="background-color: #adadad">
+<td style="color:yellow;font-size:50px;text-shadow:2px 2px 2px red ;text-align: center;">R2S MENU</td>
+<td width="10%" align="center"> <a href="{{url_for('menu')}}">ORDER</a></td>
+
+</tr>
+</table><br><br><br><br><br><br><br> -->
+<h1 align ="center" style="font-family:ariel;font-size:60px;color:navy"> R2S MENU </h1>
+
+<table border="0" style="box-shadow:1px 1px 10px white" width="70%" height="70%" align="center">
+<tr>
+<td style="background-position:center center" valign="top" align="center">
+ <table border="0" cellpadding="8px" width="100%" style="background-color:#CCCCCC">
+ <tr style="background-color:navy;color:white">
+ <td>Food ID</td>
+ <td>Name</td>
+ <td>Price</td>
+ <td>Type</td>
+ <td>Description</td>
+
+ </tr>
+  {% for item in data %}
+<tr>
+ <td>{{item.f_id}}</td>
+ <td>{{item.f_name}}</td>
+ <td>{{item.price}}</td>
+ <td>{{item.f_type}}</td>
+    <td>{{item.f_description}}</td>
+
+
+ </tr>
+  {% endfor %}
+ </table>
+
+ </td>
+</tr>
+<tr style="background-color:rgb(12,48,141);color:white;height:25px">
+<td colspan="2"><marquee behavior="alternate">
+WE DON'T MAKE IT UNTIL YOU ORDER IT!
+</marquee></td>
+</tr>
+</table>
+</body>
+</form>
+</html>

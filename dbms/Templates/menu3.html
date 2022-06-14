@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>R2S | MENU</title>
+        <meta name="description" content="This is the description">
+        <link href="{{url_for('static', filename = 'css/style.css')}}" rel="stylesheet">
+        <script src="static/js/store.js" async></script>
+    </head>
+    <form action="{{url_for('menuu')}}" method='post'>
+    <body>
+        <header class="main-header">
+
+            <h1 class="band-name band-name-large">MENU</h1>
+        </header>
+        <section class="container content-section">
+            {% block content %}
+            <h2 class="section-header">PIZZA</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">
+                    {% for food in foodlist %}
+                        <ul>
+                    {{ food.f_name }}
+                        </ul></span>
+                        <ul>
+                      <div class="shop-item-details">
+                        <span class="shop-item-price">  {{ food.price }}
+                    </ul>
+                    </span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                            </div>
+                </div>
+
+ {% endfor %}
+
+ {% endblock %}
+                    </section>
+
+
+                    </div>
+                    </div>
+            </div>
+        </footer>
+    </body>
+</html>

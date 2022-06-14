@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<title>R2S CAFE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif; margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+</style>
+<body>
+<!-- Start Content -->
+<div id="home"  style="background-color:gray;width:;font-size:25px" >
+
+<!-- Navbar (Sits on top) -->
+<div >
+<a href="{{url_for('menuu')}}" class="w3-bar-item w3-button"><b>MENU</b></a>
+<a href= "{{url_for('menu')}}" class="w3-bar-item w3-button"><b>ORDER</b></a>
+<a href= "{{url_for('about')}}"class="w3-bar-item w3-button"><b>ABOUT</b></a>
+
+
+<!-- Header image -->
+
+<div style="height:900px;width:100%;background-image:url('static/img/cafe1.jpg')" class="w3-display-container w3-grayscale-min">
+<div class="w3-display-middle w3-center">
+<span class="w3-text-white" style="font-size:100px;font-family:Amatic SC,sans-serif;text-align:center">DRINK<br>&<br>DINE</span>
+<p style="font-family:Amatic SC,sans-serif"><a href="#menu" class="w3-button w3-xxlarge w3-black">The Best Cafe In Town</a></p>
+</div>
+</div>
+
+<!-- End Content -->
+</div>
+</body>
+</html>
